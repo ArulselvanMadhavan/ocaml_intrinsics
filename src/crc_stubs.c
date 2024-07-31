@@ -24,7 +24,7 @@ static inline uint32_t crc32(uint32_t initial, uint32_t data)
 #include <smmintrin.h>
 #endif
 
-#ifdef ARCH_SIXTYFOUR
+#ifdef defined(__aarch64__)
 static inline uint64_t crc64(uint64_t initial, uint64_t data)
 {
    return _mm_crc32_u64(initial, data);
